@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require("browser-sync").create();
+const minifyCss = require("gulp-minify-css");
 
 gulp.task('hello', function(done){
     console.log('Привет');
@@ -14,4 +15,11 @@ gulp.task('browser-sync', function() {
         }
     });
     gulp.watch("./*.html").on("change", browserSync.reload);
+});
+
+gulp.task("mincss", function () {
+  var fb = gulp.src("main.css");
+  fb.pipe(minifyCss());
+  fb.pipe(gulp.dest("main"));
+  return fb;
 });
