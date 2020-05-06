@@ -18,7 +18,8 @@
   "homepage": "https://github.com/NickBox99/repair-design#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-minify-css": "^1.2.4"
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.1.0"
   },
   "dependencies": {
     "browser-sync": "^2.26.7"
