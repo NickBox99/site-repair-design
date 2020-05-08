@@ -391,6 +391,21 @@ template {
     font-size: 22px; }
   .hero__button {
     margin-right: 20px; }
+  .hero__sroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313;
+    font-size: 12px;
+    font-family: 'Yeseva One', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff; }
 
 .instagram {
   display: flex;
