@@ -313,7 +313,9 @@ template {
   border: 0;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
-  text-transform: uppercase; }
+  font-family: 'Futura Demi', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer; }
   .button--primary {
     color: #fff;
     background-color: #E3B873; }
@@ -333,8 +335,13 @@ template {
   font-display: wrap; }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #131313;
-  padding: 24px 0; }
+  padding: 24px 0;
+  z-index: 99; }
 
 .menu {
   display: flex;
@@ -342,6 +349,7 @@ template {
   align-items: center; }
 
 .logo {
+  font-family: 'Futura Demi', sans-serif;
   color: #E3B873;
   text-transform: uppercase; }
 
@@ -357,6 +365,37 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
+.hero {
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
+  color: #fff;
+  background: #131313 url(../img/hero-bg.jpg) no-repeat center/cover; }
+  .hero__instagram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 90px;
+    height: 100vh; }
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313; }
+  .instagram__link {
+    font-family: 'Futura Demi', sans-serif;
+    color: #E3B873;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: rotate(90deg); }
+
+.title {
+  margin: 0; }
+
+*, *:after, *:before {
+  box-sizing: border-box; }
+
 body {
   font-size: 14px;
-  font-family: sans-serif; }
+  font-family: 'Futura Book', sans-serif; }
