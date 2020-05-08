@@ -305,7 +305,8 @@ template {
   display: none; }
 
 .container {
-  width: 1256px;
+  width: 85%;
+  max-width: 1256px;
   margin: auto; }
 
 .button {
@@ -315,10 +316,13 @@ template {
   border-radius: 2px;
   font-family: 'Futura Demi', sans-serif;
   text-transform: uppercase;
+  color: #fff;
   cursor: pointer; }
   .button--primary {
-    color: #fff;
     background-color: #E3B873; }
+  .button--outline {
+    border: 1px solid #fff;
+    background-color: transparent; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -367,6 +371,9 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 100px;
   height: 100vh;
   color: #fff;
@@ -377,6 +384,13 @@ template {
     left: 0;
     max-width: 90px;
     height: 100vh; }
+  .hero__content {
+    max-width: 670px; }
+  .hero__text {
+    max-width: 500px;
+    font-size: 22px; }
+  .hero__button {
+    margin-right: 20px; }
 
 .instagram {
   display: flex;
@@ -391,7 +405,12 @@ template {
     transform: rotate(90deg); }
 
 .title {
-  margin: 0; }
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:after, *:before {
   box-sizing: border-box; }

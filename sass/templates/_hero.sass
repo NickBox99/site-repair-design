@@ -1,5 +1,8 @@
 .hero
     position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
     padding-top: 100px
     height: 100vh
     color: $light
@@ -10,6 +13,13 @@
         left: 0
         max-width: 90px
         height: 100vh
+    &__content
+        max-width: 670px
+    &__text
+        max-width: 500px
+        font-size: 22px
+    &__button
+        margin-right: 20px
 .instagram
     display: flex
     justify-content: center
@@ -21,6 +31,10 @@
         text-decoration: none
         text-transform: uppercase
         transform: rotate(90deg)
-
 .title
     margin: 0
+    font-size: 40px
+    font-family: 'Yeseva One', cursive
+    text-transform: uppercase
+    &--primary
+        color: $primary
