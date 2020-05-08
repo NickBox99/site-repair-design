@@ -318,6 +318,20 @@ template {
     color: #fff;
     background-color: #E3B873; }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/FuturaBookC.woff") format("woff"), url("../fonts/FuturaBookC.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/FuturaDemiC.woff") format("woff"), url("../fonts/FuturaDemiC.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 .header {
   background-color: #131313;
   padding: 24px 0; }
