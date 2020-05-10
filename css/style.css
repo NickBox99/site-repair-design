@@ -326,7 +326,11 @@ template {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #fff;
-    background-color: transparent; }
+    background-color: transparent;
+    transition: 0.5s; }
+    .button--outline:hover {
+      border: 1px solid #E3B873;
+      color: #E3B873; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -380,8 +384,19 @@ body {
 
 .logo {
   font-family: 'Futura Demi', sans-serif;
+  text-decoration: none;
   color: #E3B873;
   text-transform: uppercase; }
+  .logo:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 0px;
+    background: #E3B873;
+    transition: 0.8s; }
+  .logo:hover:after {
+    width: 100%;
+    height: 1px; }
 
 .nav__item {
   margin-right: 40px;
@@ -396,7 +411,10 @@ body {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 45px;
+  transition: color 0.2s; }
+  .contacts__phone:hover {
+    color: #fff; }
 
 .hero {
   position: relative;
@@ -406,7 +424,7 @@ body {
   padding-top: 100px;
   height: 100vh;
   color: #fff;
-  background: #131313 url(../img/hero-bg.jpg) no-repeat center/cover; }
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover; }
   .hero:before {
     content: '';
     position: absolute;
@@ -443,16 +461,19 @@ body {
     font-family: 'Yeseva One', cursive;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    transition: color 0.2s; }
     .hero__sroll-down:after {
       content: '';
       display: block;
       width: 30px;
       height: 30px;
       margin-left: 12px;
-      background: url(../img/arrow-down.svg) no-repeat center;
+      background: url("../img/arrow-down.svg") no-repeat center;
       border: 2px solid #E3B873;
       border-radius: 50%; }
+    .hero__sroll-down:hover {
+      color: #E3B873; }
 
 .instagram {
   display: flex;
@@ -467,13 +488,18 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     transform: rotate(90deg);
-    line-height: 0.8; }
+    line-height: 0.8;
+    transition: 0.2s; }
     .instagram__link:after {
       content: '';
       width: 50px;
       height: 1px;
       margin-left: 10px;
       background-color: #E3B873; }
+    .instagram__link:hover {
+      color: #fff; }
+      .instagram__link:hover:after {
+        background-color: #fff; }
 
 .title {
   margin: 0;

@@ -6,7 +6,7 @@
     padding-top: 100px
     height: 100vh
     color: $light
-    background: $dark url(../img/hero-bg.jpg) no-repeat center  / cover
+    background: $dark url("../img/hero-bg.jpg") no-repeat center  / cover
     &:before
         content: ''
         position: absolute
@@ -44,15 +44,18 @@
         text-decoration: none
         text-transform: uppercase
         color: $light
+        transition: color 0.2s
         &:after
             content: ''
             display: block
             width: 30px
             height: 30px
             margin-left: 12px
-            background: url(../img/arrow-down.svg) no-repeat center
+            background: url("../img/arrow-down.svg") no-repeat center
             border: 2px solid $primary
             border-radius: 50%
+        &:hover
+            color: $primary
 .instagram
     display: flex
     justify-content: center
@@ -67,12 +70,17 @@
         text-transform: uppercase
         transform: rotate(90deg)
         line-height: 0.8
+        transition: 0.2s
         &:after
             content: ''
             width: 50px
             height: 1px
             margin-left: 10px
             background-color: $primary
+        &:hover
+            color: $light
+            &:after
+                background-color: $light
 .title
     margin: 0
     font-size: 40px
