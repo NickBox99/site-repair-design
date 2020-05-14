@@ -1,6 +1,50 @@
-// @media screen and ( max-width: 1200px )
-    
-// @media screen and ( max-width: 992px )
-// @media screen and ( max-width: 768px )
-// @media screen and ( max-width: 576px )
+@media screen and ( max-height: 600px )
+    .hero
+        &__sroll-down
+            display: none
+
+@media screen and ( max-width: 1270px )
+    .contacts
+        &__phone
+            margin-right: 0.8rem
+    .nav
+        &__item
+            margin-right: 1.85714rem
+@media screen and ( max-width: 1200px )
+    html
+        font-size: 12px
+    .nav
+        &__item
+            margin-right: 1rem
+@media screen and ( max-width: 992px )
+    .nav
+        display: none
+    .hero
+        &__instagram
+            display: none
+        &__content
+            margin-left: 0
+@media screen and ( max-width: 576px )
+    .contacts
+        &__phone
+            margin-right: 0
+            color: $light
+            text-decoration: none
+        &__button
+            display: none
+    .title
+        font-size: 1.64rem
+    .hero
+        &__sroll-down
+            display: none
+        &__content
+            min-width: 22.86rem
+        &__text
+            font-size: 1.29rem
+            margin-bottom: 2.28rem
+        &__button
+            display: block
+            min-width: 22.86rem
+            margin-bottom: 1.85rem
+
 // @media screen and ( max-width: 320px )
