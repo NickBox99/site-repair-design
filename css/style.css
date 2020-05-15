@@ -563,6 +563,7 @@ body {
   padding-left: 1.2rem; }
 
 .card__item {
+  color: #959595;
   font-size: 1.071rem;
   line-height: 1.7857rem; }
 
@@ -576,6 +577,21 @@ body {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff; }
+
+.dising {
+  padding-bottom: 2rem;
+  background: linear-gradient(to top, #131313 50%, #fff 50%); }
+  .dising__title {
+    margin-bottom: 1.64rem;
+    color: #fff; }
+  .dising__description {
+    max-width: 53rem;
+    margin: 0 auto;
+    margin-bottom: 1.857rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.428rem;
+    line-height: 1.92rem; }
 
 @media screen and (max-height: 600px) {
   .hero__sroll-down {
@@ -606,7 +622,9 @@ body {
   .types__card {
     margin-bottom: 6rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .dising {
+    background: #131313; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
