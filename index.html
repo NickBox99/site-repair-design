@@ -24,7 +24,7 @@
           <!-- /.nav -->
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-            <button class="button contacts__button button--primary">Заказать звонок</button>
+            <button class="button contacts__button button--primary" data-toggle = "modal">Заказать звонок</button>
           </div>
           <!-- /.contacts -->
         </div>
@@ -45,7 +45,7 @@
               Получите готовый ремонт под ключ в срок с экономией рабочего времени
               до 45 дней и 20% от стоимости материалов за счет организации работы
             </p>
-            <button class="button hero__button button--primary">
+            <button class="button hero__button button--primary" data-toggle = "modal">
               Расчитать стоимость
             </button>
             <button class="button hero__button button--outline">
@@ -173,8 +173,6 @@
         <!-- /.container -->
       </section>
       <!-- /.section types -->
-
-
       <section class="section dising">
         <div class="container">
           <div class="section-title dising__title">
@@ -287,6 +285,32 @@
         <!-- /.container -->
       </section>
       <!-- /.section types -->
+
+      <div class="modal">
+        <div class="modal__dialog">
+          <button class="modal__close"></button>
+          <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
+          <form action="#" class="form modal__form">
+            <label for="user-name" class="label form__label">Имя</label>
+            <input type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
+
+            <label for="user-phone" class="label form__label">Телефон</label>
+            <input type="text" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+
+            <label for="user-email" class="label form__label">Email</label>
+            <input type="text" class="input form__input" id="user-email" placeholder="Ваш email">
+            
+            <div class="policy modal__policy">
+              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
+              <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+            </div>
+            <button class="button form__button button--primary">Отправить заявку</button>
+          </form>
+          <!-- Конец формы -->
+        </div>
+      </div>
     </main>
+
+    <script src="/js/main.js"></script>
   </body>
 </html>
