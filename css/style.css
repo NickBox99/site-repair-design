@@ -306,7 +306,7 @@ template {
 
 .container {
   width: 85%;
-  max-width: 1256px;
+  max-width: 89.714rem;
   margin: auto; }
 
 .button {
@@ -420,9 +420,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .menu__nav {
+    padding-left: 1.357rem; }
 
 .logo {
   font-family: 'Futura Demi', sans-serif;
+  font-size: 1rem;
   text-decoration: none;
   color: #E3B873;
   text-transform: uppercase; }
@@ -727,6 +730,11 @@ body {
       color: #fff; } }
 
 @media screen and (max-width: 576px) {
+  html {
+    font-size: 12px; }
+  .container {
+    width: 90.5%;
+    margin: 0 auto; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -734,15 +742,19 @@ body {
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem; }
-  .hero__sroll-down {
-    display: none; }
-  .hero__content {
-    min-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    font-size: 1.91rem; }
+  .hero {
+    justify-content: start;
+    padding-top: 145px; }
+    .hero__sroll-down {
+      display: none; }
+    .hero__content {
+      min-width: 22.86rem; }
+    .hero__text {
+      font-size: 1.5rem;
+      margin-bottom: 2.88rem; }
+    .hero__button {
+      display: block;
+      min-width: 100%;
+      margin-bottom: 2.15rem;
+      font-size: 1.08rem; } }
