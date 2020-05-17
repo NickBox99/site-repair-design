@@ -335,6 +335,34 @@ template {
     .button--outline:last-of-type {
       padding: 18px 41px; }
 
+.label {
+  font-size: 1.071rem;
+  color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  padding: 0.5rem 0;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+  .input::-webkit-input-placeholder {
+    font-size: 1.285rem;
+    color: #fff; }
+  .input::-moz-placeholder {
+    font-size: 1.285rem;
+    color: #fff; }
+  .input:-ms-input-placeholder {
+    font-size: 1.285rem;
+    color: #fff; }
+  .input::-ms-input-placeholder {
+    font-size: 1.285rem;
+    color: #fff; }
+  .input::placeholder {
+    font-size: 1.285rem;
+    color: #fff; }
+  .input:last-of-type {
+    margin-bottom: 1.14rem; }
+
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/FuturaBookC.woff") format("woff"), url("../fonts/FuturaBookC.woff2") format("woff");
@@ -378,34 +406,6 @@ body {
       height: 2px;
       margin: 0 10px;
       background-color: #E3B873; }
-
-.label {
-  font-size: 1.071rem;
-  color: rgba(255, 255, 255, 0.5); }
-
-.input {
-  padding: 0.5rem 0;
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
-  .input::-webkit-input-placeholder {
-    font-size: 1.285rem;
-    color: #fff; }
-  .input::-moz-placeholder {
-    font-size: 1.285rem;
-    color: #fff; }
-  .input:-ms-input-placeholder {
-    font-size: 1.285rem;
-    color: #fff; }
-  .input::-ms-input-placeholder {
-    font-size: 1.285rem;
-    color: #fff; }
-  .input::placeholder {
-    font-size: 1.285rem;
-    color: #fff; }
-  .input:last-of-type {
-    margin-bottom: 1.14rem; }
 
 .header {
   position: fixed;
@@ -562,7 +562,7 @@ body {
   .types__row {
     padding: 0 0.71rem; }
   .types__title {
-    margin-bottom: 2.1rem; }
+    margin-bottom: 2.5rem; }
 
 .row {
   display: flex;
@@ -578,7 +578,7 @@ body {
 .card__text {
   position: relative;
   margin: 0 auto;
-  margin-top: -10.4rem;
+  margin-top: -9.2rem;
   max-width: 23.6rem;
   padding: 0.45rem 2.4rem;
   background-color: #fff;
@@ -590,19 +590,20 @@ body {
   margin-bottom: 0.642rem; }
 
 .card__list {
-  margin: 0 0 3.428rem 0;
+  margin: 0 0 3.828rem 0;
   padding-left: 1.2rem; }
 
 .card__item {
   color: #959595;
   font-size: 1.071rem;
-  line-height: 1.7857rem; }
+  line-height: 1.729; }
 
 .card__price-tag {
   position: absolute;
   bottom: -1.9rem;
   left: 0;
-  padding: 1.214rem 2.9rem;
+  font-weight: 400;
+  padding: 1.214rem 2.7rem;
   font-family: "Yeseva One", sans-serif;
   font-size: 1.285rem;
   text-transform: uppercase;
@@ -613,14 +614,20 @@ body {
   padding-bottom: 2rem;
   background: linear-gradient(to top, #131313 50%, #fff 50%); }
   .dising__title {
-    margin-bottom: 1.64rem; }
+    margin-bottom: 1.54rem; }
   .dising__description {
     max-width: 53rem;
     margin: 0 auto;
-    margin-bottom: 1.857rem;
+    margin-bottom: 3.657rem;
     text-align: center;
     font-size: 1.428rem;
     line-height: 1.92rem; }
+  .dising__price-tag {
+    bottom: -1.7rem;
+    padding-left: 2.37rem;
+    padding-right: 3rem;
+    padding-right: 5.4rem;
+    text-align: left; }
 
 .modal {
   position: fixed;
@@ -735,6 +742,8 @@ body {
   .container {
     width: 90.5%;
     margin: 0 auto; }
+  .section-title__heading {
+    font-size: 1.828rem; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -757,4 +766,19 @@ body {
       display: block;
       min-width: 100%;
       margin-bottom: 2.15rem;
-      font-size: 1.08rem; } }
+      font-size: 1.08rem; }
+  .types__title {
+    margin-bottom: 3.3rem; }
+  .card__text {
+    margin-top: -10.4rem;
+    max-width: 22.5rem; }
+  .card__price-tag {
+    bottom: -0.9rem;
+    padding: 1.014rem 2.6rem; }
+  .dising__description {
+    margin-bottom: 4.757rem;
+    font-size: 1.14499rem;
+    line-height: 1.72rem; }
+  .dising__price-tag {
+    padding-left: 3.9rem;
+    padding-right: 4rem; } }
