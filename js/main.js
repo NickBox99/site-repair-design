@@ -1,34 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.querySelector('.modal');
-    const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-    const closeModal = document.querySelector('.modal__close');
-    const switchModal = ()=>{
-        modal.classList.toggle('modal--visible');
+$(document).ready(function () {
+  const modal = $(".modal"),
+    modalBtn = $("[data-toggle=modal]"),
+    closeModal = $(".modal__close"),
+    switchModal = () => {
+      modal.toggleClass("modal--visible");
     };
 
-    modalBtn.forEach(element => {
-        element.addEventListener('click', switchModal);
-    });
+  modalBtn.on("click", switchModal);
+  closeModal.on("click", switchModal);
 
-    closeModal.addEventListener("click", switchModal);;
+  $(".modal").on("click", function (e) {
+    if (e.target == this) switchModal();
+  });
 
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        switchModal();
-      }
-    };
+  $(document).keydown(function (e) {
+    if (e.keyCode == 27) {
+      $(".modal").removeClass("modal--visible");
+    }
+  });
 
-    document.onkeydown = function (evt) {
-      evt = evt || window.event;
-      var isEscape = false;
-      if ("key" in evt) {
-        isEscape = evt.key === "Escape" || evt.key === "Esc";
-      } else {
-        isEscape = evt.keyCode === 27;
-      }
-      if (isEscape) {
-          modal.classList.remove('modal--visible')
-      }
-    };
+  
+  let btn = document.querySelector(".button-up");
+  
+  function magic() {
+    if (window.pageYOffset > 1000) {
+      btn.style.opacity = "1";
+    } else {
+      btn.style.opacity = "0";
+    }
+  }
 
+  $(btn).click(function () {
+    $("body,html").animate({ scrollTop: 0 }, 800);
+    return false;
+  });
+
+  // When scrolling, we run the function
+  window.onscroll = magic;
 });

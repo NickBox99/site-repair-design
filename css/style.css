@@ -787,3 +787,13 @@ body {
   .dising__price-tag {
     padding-left: 3.9rem;
     padding-right: 4rem; } }
+
+.button-up {
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  background: url(../img/rocket.svg) no-repeat center/cover; }
