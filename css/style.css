@@ -361,7 +361,7 @@ template {
     font-size: 1.285rem;
     color: #fff; }
   .input:last-of-type {
-    margin-bottom: 1.14rem; }
+    margin-bottom: 0.2rem; }
 
 @font-face {
   font-family: 'Futura Book';
@@ -668,9 +668,9 @@ body {
     font-size: 1.357rem;
     line-height: 1.86rem;
     text-align: center;
-    margin: 0 0 2.42rem 0; }
+    margin: 0 0 2.2rem 0; }
   .modal__policy {
-    margin-bottom: 4.28rem; }
+    margin-bottom: 2.78rem; }
 
 .form {
   display: flex;
@@ -678,7 +678,12 @@ body {
   .form__input {
     margin-bottom: 3.43rem; }
   .form__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 19px 46px;
+    border-radius: 0; }
+
+.policy__label {
+  font-size: 1.125rem; }
 
 .policy-checkbox {
   opacity: 0;

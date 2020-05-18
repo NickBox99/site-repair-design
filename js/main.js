@@ -12,8 +12,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closeModal.addEventListener("click", switchModal);;
 
-    document.addEventListener('keypress', (e) => {
-        console.log(e.key + ", " + e.keyCode);
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        switchModal();
+      }
+    };
 
-    });
+    document.onkeydown = function (evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+        isEscape = evt.key === "Escape" || evt.key === "Esc";
+      } else {
+        isEscape = evt.keyCode === 27;
+      }
+      if (isEscape) {
+          modal.classList.remove('modal--visible')
+      }
+    };
+
 });
