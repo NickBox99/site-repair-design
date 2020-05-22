@@ -1,0 +1,50 @@
+.projects
+    padding: 7.94rem 0 0 0
+    &__section-title
+        margin-bottom: 2.35rem
+.swiper
+    &-pagination
+        &-bullet
+            background-color: rgba(255, 255, 255, 0.3)
+            &-active
+                background-color: $light
+    &-button
+        &-prev, &-next
+            right: 0
+            left: 0
+            bottom: 0
+            top: 100%
+            background-size: 42px
+            width: 42px
+            height: 14px
+            &::after
+                display: none
+        &-prev
+            background: url(../img/arrow-prev.svg) no-repeat center
+        &-next
+            background: url(../img/arrow-next.svg) no-repeat center
+    &-slide
+        margin-right: 0.1px
+        margin-bottom: 1.5rem
+        &__content
+            display: flex
+            flex-wrap: wrap
+            margin-bottom: 2.2rem
+            width: 60%
+        &__item
+            flex-basis: 50%
+            margin-bottom: 1.71rem
+        &__title
+            margin-bottom: 0.68rem
+            font-family: 'Yeseva One', cursive
+            font-size: 1.285rem
+            color: $primary
+            text-transform: uppercase
+        &__desctiption
+            display: block
+            font-size: 1.071rem
+        &__img
+            margin-top: 1.28rem
+.swiper-container-horizontal>.swiper-pagination-bullets
+    width: auto
+    bottom: 7px

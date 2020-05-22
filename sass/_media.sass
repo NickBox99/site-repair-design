@@ -2,7 +2,9 @@
     .hero
         &__sroll-down
             display: none
-
+@media screen and ( max-width: 1310px )
+    body
+        font-size: 0.9rem
 @media screen and ( max-width: 1270px )
     .contacts
         &__phone
@@ -10,6 +12,19 @@
     .nav
         &__item
             margin-right: 1.85714rem
+    .section-title
+        &__desctiption
+            margin: 0
+    .projects
+        &__section-title
+            margin: 0
+    .swiper-slide
+        margin-bottom: 1.5rem
+        &__content
+            width: 90%
+            margin-bottom: 1rem
+        &__item
+            margin-bottom: 0.11rem
 @media screen and ( max-width: 1200px )
     html
         font-size: 12px
@@ -39,6 +54,10 @@
             color: $light
         &__description
             color: $light
+    .col-50
+        width: 100%
+    .goals
+        display: none
 @media screen and ( max-width: 576px )
     html
         font-size: 12px
@@ -48,6 +67,9 @@
     .section-title
         &__heading
             font-size: 1.828rem
+            &--fz27
+                font-size: 1.7rem
+                margin-top: 0
     .contacts
         &__phone
             margin-right: 0
@@ -84,9 +106,33 @@
             padding: 1.014rem 2.6rem
     .dising
         &__description
+            max-width: 85%
             margin-bottom: 4.757rem
-            font-size: 1.14499rem
+            font-size: 1.25rem
             line-height: 1.72rem
         &__price-tag
             padding-left: 3.9rem
             padding-right: 4rem
+    .projects
+        padding: 0
+        &__section-title
+            margin-bottom: 2rem
+    .section-title
+        &__word
+            &::after
+                display: none
+        &__desctiption
+            font-size: 1.2rem
+            line-height: 160%
+            max-width: 305px
+    .swiper
+        &-slide
+            &__content
+                width: 93%
+            &__title
+                margin-bottom: 1rem
+                font-size: 1.2rem
+            &__desctiption
+                font-size: 1.2rem
+            &__item
+                margin-bottom: 1.5rem

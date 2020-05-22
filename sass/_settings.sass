@@ -8,12 +8,38 @@ body
     font-size: 1rem
     font-family: 'Futura Book', sans-serif
 .section
+    &--dark
+        background-color: $dark
+        color: $light
     &-title
         font-family: 'Yeseva One', cursive
         text-align: center
         text-transform: uppercase
+        &__word
+            display: flex
+            align-items: center
+            line-height: 3.2rem
+            &::after
+                content: ''
+                display: block
+                width: 91px
+                height: 1px
+                margin-left: 2.3rem
+                background-color: $primary
+        &--left
+            text-align: left
         &__heading
             font-size: 1.428rem
+            &--fz27
+                font-size: 1.75rem
+            &--primary
+                color: $primary
+        &__desctiption
+            font-family: 'Futura Book', sans-serif
+            max-width: 442px
+            font-size: 1.285rem
+            line-height: 2.07rem
+            text-transform: none
         &__image
             display: flex
             align-items: center
