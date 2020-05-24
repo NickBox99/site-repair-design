@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Урок №14</title>
+    <title>Ремонт квартир</title>
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -41,15 +42,15 @@
         </div>
         <div class="container">
           <div class="hero__content">
-            <h2 class="title hero__title">турецкий ремонт в&nbsp;<span class="title--primary">Ростове&nbsp;-на-дону</span></h2>
-            <p class="hero__text">
+            <h2 class="title hero__title animate__animated animate__backInLeft">турецкий ремонт в&nbsp;<span class="title--primary">Ростове&nbsp;-на-дону</span></h2>
+            <p class="hero__text animate__animated animate__backInLeft">
               Получите готовый ремонт под ключ в срок с экономией рабочего времени
               до 45 дней и 20% от стоимости материалов за счет организации работы
             </p>
-            <button class="button hero__button button--primary" data-toggle = "modal">
+            <button class="button hero__button button--primary animate__animated animate__backInLeft" data-toggle = "modal">
               Расчитать стоимость
             </button>
-            <button class="button hero__button button--outline">
+            <button class="button hero__button button--outline animate__animated animate__backInLeft">
               Отправить заявку
             </button>
           </div>
@@ -181,12 +182,40 @@
       </section>
       <section class="section control">
         <div class="container">
-          <div class="section-title">
+          <div class="section-title section-title--light control__section-title wow animate__animated animate__backInLeft">
             <h2 class="section-title__heading">Онлайн контроль</h2>
             <div class="section-title__image">
               <img src="img/video.svg" alt="video">
             </div>
           </div>
+
+          <div class="video control__video">
+            <img src="/img/play-icon.svg" alt="видео" class="video__player">
+          </div>
+          
+          <p class="control__desctiption">На каждом объекте установлена ​​камера, 
+            которая транслирует ход работы на часах. В любой момент вы можете 
+            зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите 
+            прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
+          </p>
+
+          <form action="#" class="form control__form">
+            <div class="form__group-box">
+              <label for="user-name" class="label label--grey form__label">Имя</label>
+              <input type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
+            </div>
+
+            <div class="form__group-box">
+              <label for="user-phone" class="label label--grey form__label">Телефон</label>
+              <input type="text" class="input input--black control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            </div>
+
+            <button class="button form__button button--primary control__button">Отправить</button>
+            <div class="policy control__policy">
+              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
+              <label for="policy-checkbox" class="policy__label policy__label--content-center">Я соглашаюсь с обработкой данных</label>
+            </div>
+          </form>
         </div>
         <!-- /.container -->
       </section>
@@ -194,7 +223,7 @@
       <section class="section types">
         <div class="container">
           <div class="section-title types__title">
-            <h2 class="section-title__heading">Виды ремонта</h2>
+            <h2 class="section-title__heading wow animate__animated animate__backInLeft">Виды ремонта</h2>
             <div class="section-title__image">
               <img src="img/tools.svg" alt="tools">
             </div>
@@ -297,7 +326,7 @@
       <section class="section dising">
         <div class="container">
           <div class="section-title dising__title">
-            <h2 class="section-title__heading">Дизайн проект</h2>
+            <h2 class="section-title__heading wow animate__animated animate__backInLeft">Дизайн проект</h2>
             <div class="section-title__image">
               <img src="img/pens.svg" alt="pens">
             </div>
@@ -509,7 +538,7 @@
               </div>
             </div>
             <!-- /.col--max-wicth337px -->
-            <div class="col--max-wicth765px">
+            <div class="col-62">
               <div class="goals__items">
                 <div class="goals__item goals__item-active">
                   <div class="goals__number">01</div>
@@ -599,8 +628,9 @@
       <button class="button-up"></button>
     </main>
 
-    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

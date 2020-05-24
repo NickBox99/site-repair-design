@@ -1,0 +1,75 @@
+.video
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 58.35rem
+    min-height: 31rem
+    background: $dark url(../img/bg-video.jpg) no-repeat center / cover 
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: $dark
+        opacity: 0.8
+    &__player
+        position: relative
+        cursor: pointer
+.control
+    margin-top: -24.2rem
+    &__section-title
+        margin-bottom: 2rem
+    &__video
+        margin: 0 auto
+        margin-bottom: 4.6rem
+    &__desctiption
+        max-width: 40.48rem
+        letter-spacing: -0.03rem
+        margin: 0 auto
+        margin-bottom: 4.4rem
+        font-size: 1.5rem
+        text-align: center
+        line-height: 2.42rem
+        &::before
+            content: ''
+            display: block
+            margin: 0 auto
+            margin-bottom: 2rem
+            width: 55px
+            height: 1.5px
+            background-color: $primary
+    &__form
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        max-width: 55rem
+        margin: 0 auto
+        margin-bottom: 10.4rem
+    &__policy
+        margin-top: 1.2rem
+        flex-basis: 100%
+    &__input
+        color: black
+        border-bottom: 1px solid grey
+        &::placeholder
+            color: black
+    &__button
+        padding: 19px 65px
+.form
+    &__group-box
+        display: flex
+        flex-direction: column
+        min-width: 16.5rem
+        color: $dark
+        &:nth-child(2)
+            margin-left: 6px
+.policy
+    &__label
+        &--content-center
+            justify-content: center
+.label--grey
+        color: grey

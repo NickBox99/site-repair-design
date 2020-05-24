@@ -15,6 +15,8 @@ body
         font-family: 'Yeseva One', cursive
         text-align: center
         text-transform: uppercase
+        &--light
+            color: $light
         &__word
             display: flex
             align-items: center
@@ -50,4 +52,12 @@ body
                 height: 2px
                 margin: 0 10px
                 background-color: $primary
-
+.form
+    display: flex
+    flex-direction: column
+    &__input
+        margin-bottom: 3.43rem
+    &__button
+        align-self: flex-end
+        padding: 19px 46px
+        border-radius: 0

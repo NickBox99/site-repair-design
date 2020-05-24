@@ -31,6 +31,12 @@
     .nav
         &__item
             margin-right: 1rem
+    .section-title
+        &__desctiption
+            font-size: 1.18rem
+    .goals
+        &__desctiption
+            min-width: 95%
 @media screen and ( max-width: 992px )
     .nav
         display: none
@@ -58,6 +64,35 @@
         width: 100%
     .goals
         display: none
+    .control
+        margin-top: -79.6rem
+        &__desctiption
+            color: $light
+        &__input
+            color: $light
+            border-bottom: 1px solid $light
+            &::placeholder
+                color: $light
+        &__form
+            flex-direction: column
+        &__button
+            order: 5
+        &__policy
+            margin-top: 0
+    .form
+        &__group-box
+            margin-bottom: 3rem
+            &:nth-child(2)
+                margin-left: 0
+                margin-bottom: 0
+        &__button
+            align-self: auto
+    .projects
+        padding-bottom: 80rem
+    .policy__label--content-center
+        justify-content: start
+        color: $light
+        margin-bottom: 2rem
 @media screen and ( max-width: 576px )
     html
         font-size: 12px
@@ -114,7 +149,7 @@
             padding-left: 3.9rem
             padding-right: 4rem
     .projects
-        padding: 0
+        padding-bottom: 69.5rem
         &__section-title
             margin-bottom: 2rem
     .section-title
@@ -136,3 +171,31 @@
                 font-size: 1.2rem
             &__item
                 margin-bottom: 1.5rem
+    .control
+        margin-top: -69.8rem
+        &__section-title
+            margin-bottom: 3.5rem
+        &__video
+            margin-bottom: 2.1rem
+        &__desctiption 
+            margin-bottom: 2.4rem
+            letter-spacing: -0.01rem
+            font-size: 1.2rem
+            line-height: 2.02rem
+            &::before
+                margin-bottom: 1.3rem
+        &__input
+            line-height: 0
+            &::placeholder
+                font-size: 1.5rem
+        &__policy
+            margin-bottom: 3.2rem
+    .video
+        min-height: 17.2rem
+        &__player
+            width: 61px
+    .form
+        &__group-box
+            margin-bottom: 5.3rem
+            &:nth-child(2)
+                margin-bottom: 1rem

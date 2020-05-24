@@ -1,4 +1,5 @@
 $(document).ready(function () {
+ 
   const modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
     closeModal = $(".modal__close"),
@@ -114,4 +115,14 @@ $(document).ready(function () {
       });
     }
   );
+
+  new WOW().init();
+
+  $(window).scroll(function () {
+    var controlDesctiption = $(".control__desctiption").offset().top - 600;
+
+    if ($(this).scrollTop() > controlDesctiption) {
+      $(".control__desctiption").addClass("myAnimated");
+    } 
+  });
 });
