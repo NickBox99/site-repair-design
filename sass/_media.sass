@@ -5,6 +5,12 @@
 @media screen and ( max-width: 1310px )
     body
         font-size: 0.9rem
+    .card
+        &__name
+            font-size: 1rem
+    .footer
+        &__block
+            padding: 1.1rem 6%
 @media screen and ( max-width: 1270px )
     .contacts
         &__phone
@@ -25,6 +31,12 @@
             margin-bottom: 1rem
         &__item
             margin-bottom: 0.11rem
+    .card
+        &__count
+            &-text
+                font-size: 1rem
+            &-days
+                left: 9.2rem
 @media screen and ( max-width: 1200px )
     html
         font-size: 12px
@@ -37,6 +49,17 @@
     .goals
         &__desctiption
             min-width: 95%
+    .card
+        &__name
+            font-size: 0.9rem
+        &__call-back
+            font-size: 1rem
+        &__count
+            &-days
+                left: auto
+                right: 0
+            &-meter
+                padding-right: 2.2rem
 @media screen and ( max-width: 992px )
     .nav
         display: none
@@ -45,6 +68,8 @@
             display: none
         &__content
             margin-left: 0
+        &::after
+            display: none
     .row
         flex-direction: column
         align-items: center 
@@ -54,6 +79,13 @@
     .card
         &__text
             margin-left: 0
+        &__title
+            font-size: 1.25rem
+        &__job
+            font-size: 1.51rem
+        &__tag
+            padding: 1.3rem 0
+            font-size: 1.06rem
     .dising
         background: $dark
         &__title
@@ -81,7 +113,10 @@
             margin-top: 0
     .form
         &__group-box
-            margin-bottom: 3rem
+            margin-bottom: 5.3rem
+            &--margin
+                margin-top: 5.7rem
+                margin-bottom: 0.5rem
             &:nth-child(2)
                 margin-left: 0
                 margin-bottom: 0
@@ -93,6 +128,77 @@
         justify-content: start
         color: $light
         margin-bottom: 2rem
+    .clients
+        display: none
+    .team
+        padding-top: 1.2rem
+        background: $dark
+        &__title
+            margin-bottom: 1.8rem
+        &__heading
+            margin-bottom: 0.95rem
+        &__description
+            font-size: 1.25rem
+            margin-bottom: 6.9rem
+        &__card
+            margin-bottom: 7rem
+        &__content-card
+            margin-left: auto
+            max-width: 19.4rem
+        &__text
+            display: none
+    .col-26
+        min-width: 25.4rem
+        margin-left: 3rem
+    .footer
+        padding-top: 9.8rem
+        background: $dark
+        &__block
+            max-width: 70rem
+        &__title
+            font-size: 1.67rem
+            margin-bottom: 5rem
+        &__block
+            position: relative
+            padding: 0 2%
+        &__group-box
+            flex-basis: 100%
+        &__input::placeholder
+            font-size: 1.5rem
+        &__button
+            font-size: 1.28rem
+            width: 100%
+        &__menu
+            display: none
+        &__row
+           display: flex
+           flex-wrap: wrap
+        &__links
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-basis: 100%
+            width: auto
+    .map
+        flex-basis: 100%
+        order: -1
+    .label
+        &--fz
+            font-size: 1.3rem
+    .footer
+        padding: 0
+        padding-top: 7.8px
+        &__title
+            margin-bottom: 4.7rem
+        &__block
+            padding: 0 1%
+            top: 0
+            left: 0
+            transform: translate(0,0)
+        &__address
+            line-height: 1.4
+            font-size: 1.53rem
+            max-width: 336px 
 @media screen and ( max-width: 576px )
     html
         font-size: 12px
@@ -199,3 +305,37 @@
             margin-bottom: 5.3rem
             &:nth-child(2)
                 margin-bottom: 1rem
+            &--margin
+                margin-top: 4.3rem
+                margin-bottom: 0.7rem
+    .team
+        padding-bottom: 0.9rem
+        &__content-card
+            max-width: 19.4rem
+            margin-top: -6.2rem
+        &__card
+            margin-bottom: 0
+            &-title
+                font-size: 1.5rem
+    .col-26 
+        margin-bottom: 7.6rem
+        &:last-child
+            
+            margin-bottom: 0
+    .footer
+        
+        &__policy
+            margin-bottom: 3.3rem
+        &__block
+            margin-bottom: 2.2rem
+        
+        &__mail
+            margin-right: 19px
+        &__mail, &__instagram
+            width: 40px
+    .ymaps-2-1-76-map-bg
+        max-height: 21.6rem
+    .map
+        max-height: 21.6rem
+        min-height: 21.6rem
+        margin-bottom: 3.1rem

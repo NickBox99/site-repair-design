@@ -201,12 +201,12 @@
 
           <form action="#" class="form control__form">
             <div class="form__group-box">
-              <label for="user-name" class="label label--grey form__label">Имя</label>
+              <label for="user-name" class="label label--grey form__label label--fz">Имя</label>
               <input type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
             </div>
 
             <div class="form__group-box">
-              <label for="user-phone" class="label label--grey form__label">Телефон</label>
+              <label for="user-phone" class="label label--grey form__label label--fz">Телефон</label>
               <input type="text" class="input input--black control__input" id="user-phone" placeholder="Ваш номер телефона:">
             </div>
 
@@ -621,7 +621,7 @@
                 </div>
                 <img src="img/team-person1.jpg" alt="Команда" class="card__img">
                 <div class="card__text team__content-card">
-                  <h3 class="card__title card__title--center">Алексей Колмаков</h3>
+                  <h3 class="card__title card__title--center team__card-title">Алексей Колмаков</h3>
                   <!-- /.card__title -->
                   <p class="card__job">Проектный менеджер</p>
                   <!-- /.card__list -->
@@ -638,7 +638,7 @@
                 </div>
                 <img src="img/team-person2.jpg" alt="Команда" class="card__img">
                 <div class="card__text team__content-card">
-                  <h3 class="card__title card__title--center">Алиса Сухорукова</h3>
+                  <h3 class="card__title card__title--center team__card-title">Алиса Сухорукова</h3>
                   <!-- /.card__title -->
                   <p class="card__job">Дизайнер</p>
                   <!-- /.card__list -->
@@ -655,7 +655,7 @@
                 </div>
                 <img src="img/team-person3.jpg" alt="Команда" class="card__img">
                 <div class="card__text team__content-card">
-                  <h3 class="card__title card__title--center">Давид Волынев</h3>
+                  <h3 class="card__title card__title--center team__card-title">Давид Волынев</h3>
                   <!-- /.card__title -->
                   <p class="card__job">Бригадир</p>
                   <!-- /.card__list -->
@@ -768,18 +768,18 @@
             <h3 class="footer__title">Остались вопросы?</h3>
 
             <form action="#" class="form footer__form">
-              <div class="form__group-box">
-                <label for="user-name" class="label label--grey form__label">Имя</label>
+              <div class="form__group-box footer__group-box">
+                <label for="user-name" class="label label--grey label--fz form__label">Имя</label>
                 <input type="text" class="input input--black footer__input" id="user-name" placeholder="Как вас зовут:">
               </div>
 
-              <div class="form__group-box">
-                <label for="user-phone" class="label label--grey form__label">Телефон</label>
+              <div class="form__group-box footer__group-box">
+                <label for="user-phone" class="label label--grey label--fz form__label">Телефон</label>
                 <input type="text" class="input input--black footer__input" id="user-phone" placeholder="Ваш номер телефона:">
               </div>
 
               <div class="form__group-box form__group-box--full-wicth form__group-box--margin">
-                <label for="user-phone" class="label label--grey form__label">Вопрос</label>
+                <label for="user-phone" class="label label--grey label--fz form__label">Вопрос</label>
                 <input type="text" class="input input--black footer__input" id="user-phone" placeholder="Я хочу спросить:">
               </div>
 
@@ -792,16 +792,19 @@
             </form>
           </div>
 
-          <address class="footer__address">
-            Ростов на дону, Торговый центр Plaza
-            Прямой телефон +7 (999) 768 32 99
-          </address>
-          <div class="footer__links">
-            <a href="#"><img src="img/mail-icon.svg" alt="Медиа" class="footer__mail"></a>
-            <a href="#"><img src="img/instagram-icon.svg" alt="Медиа" class="footer__instagram"></a>
-          </div>
+          <div class="footer__row">
+            <address class="footer__address">
+              Ростов на дону, Торговый центр Plaza
+              Прямой телефон +7 (999) 768 32 99
+            </address>
+            <div class="footer__links">
+              <a href="#"><img src="img/mail-icon.svg" alt="Медиа" class="footer__mail"></a>
+              <a href="#"><img src="img/instagram-icon.svg" alt="Медиа" class="footer__instagram"></a>
+            </div>
+  
+            <div class="map" id="map"></div>
 
-          <div class="map" id="map"></div>
+          </div>
 
           
         </div>
@@ -830,10 +833,6 @@
         </div>
       </footer>
       <!-- /.footer section -->
-
-
-
-
 
       <!-- Модальное окно -->
       <div class="modal" id="modal">
