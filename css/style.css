@@ -890,6 +890,224 @@ body {
   font-family: 'Yeseva One', cursive;
   font-size: 1.28rem; }
 
+.team {
+  padding-top: 5.1rem;
+  padding-bottom: 5.9rem;
+  background: linear-gradient(to top, #fff 35%, #131313 35%); }
+  .team__title {
+    margin-bottom: 1.3rem; }
+  .team__heading {
+    margin-top: 0; }
+  .team__description {
+    max-width: 32rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    font-size: 1.43rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #fff; }
+  .team__row {
+    max-width: 73.3rem;
+    margin: 0 auto;
+    margin-bottom: 3.9rem; }
+  .team__content-card {
+    padding: 0;
+    padding-top: 0.39rem;
+    margin-top: -6.1rem;
+    max-width: 16.6rem; }
+  .team__text {
+    max-width: 40.5rem;
+    margin: 0 auto;
+    font-size: 1.43rem;
+    line-height: 1.7;
+    text-align: center; }
+    .team__text::before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0.6rem;
+      width: 55px;
+      height: 1px;
+      background-color: #E3B873; }
+
+.col-26 {
+  position: relative;
+  flex-basis: 26.4%; }
+
+.card__job {
+  margin: 0;
+  margin-bottom: 1.7rem;
+  font-size: 1.31rem;
+  text-align: center; }
+
+.card__tag {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #E3B873; }
+
+.card__idea {
+  display: flex;
+  position: absolute;
+  top: -37px;
+  left: -35px;
+  width: 70px;
+  height: 70px;
+  background-color: #E3B873;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+  .card__idea-icon {
+    margin: auto; }
+
+.card__title--center {
+  text-align: center;
+  margin-bottom: 0.542rem; }
+
+.clients {
+  padding-bottom: 24rem; }
+  .clients__description {
+    max-width: 25.7rem;
+    margin: 0 auto;
+    margin-bottom: 3.1rem;
+    line-height: 1.5;
+    font-size: 1.42rem;
+    text-align: center; }
+  .clients__section-title {
+    margin-bottom: 1rem; }
+  .clients__row {
+    max-width: 88.2rem;
+    margin: 0 auto;
+    margin-bottom: 3.2rem; }
+  .clients__img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%; }
+  .clients__card {
+    position: relative;
+    padding: 1.8rem 2.12rem 4rem 1.42rem;
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04); }
+
+.card__person {
+  display: flex;
+  align-items: center; }
+
+.card__name {
+  max-width: 60%;
+  margin-left: 1.57rem;
+  font-family: 'Yeseva One', cursive;
+  font-weight: 400;
+  font-size: 1.3rem; }
+
+.card__call-back {
+  font-size: 1.08rem;
+  line-height: 1.8; }
+
+.card__count {
+  position: absolute;
+  bottom: -1.92rem;
+  left: 0;
+  padding: 0.78rem 0;
+  padding-left: 1.2rem;
+  background-color: #E3B873; }
+  .card__count-meter {
+    margin-right: 2px;
+    padding-right: 1.3rem; }
+  .card__count-days {
+    padding: 0.82rem 1.6rem 0.82rem 1.2rem;
+    left: 9.7rem; }
+  .card__count-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 1.19rem;
+    color: #fff; }
+  .card__count-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.95rem; }
+
+.col-30 {
+  flex-basis: 30.4%; }
+
+.footer {
+  position: relative;
+  padding-top: 19.7rem;
+  background: #131313 url(../img/footer-bg.jpg) center/cover; }
+  .footer__block {
+    position: absolute;
+    top: 1.2%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 63rem;
+    padding: 1.1rem 12.9rem;
+    margin: auto;
+    margin-top: -1rem;
+    background-color: #131313; }
+  .footer__title {
+    margin-bottom: 3.2rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.44rem;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff; }
+  .footer__form {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin: 0 auto;
+    margin-bottom: 3.5rem;
+    color: #fff; }
+  .footer__button {
+    margin: 0 auto;
+    margin-bottom: 1.3rem;
+    padding: 19px 64px; }
+  .footer__address {
+    margin: 0 auto;
+    margin-bottom: 1.7rem;
+    max-width: 33.5rem;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    line-height: 1.3;
+    font-size: 1.43rem;
+    color: #E3B873;
+    font-style: normal;
+    text-transform: uppercase; }
+  .footer__links {
+    margin: 0 auto;
+    margin-bottom: 2.9rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
+  .footer__mail {
+    margin-right: 9px; }
+  .footer__menu {
+    padding: 3.5rem 0;
+    background-color: #131313; }
+
+.form__group-box--full-wicth {
+  flex-basis: 100%; }
+
+.form__group-box--margin {
+  margin-top: 3.1rem;
+  margin-bottom: 1.9rem; }
+
+.map {
+  margin: 0 auto;
+  margin-bottom: 4.5rem;
+  max-width: 66rem;
+  min-height: 33.2rem; }
+
 .modal {
   position: fixed;
   opacity: 0;
