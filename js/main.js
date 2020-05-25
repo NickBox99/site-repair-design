@@ -1,5 +1,8 @@
 $(document).ready(function () {
  
+  //===============
+  //=Модальное окно
+  //===============
   const modal = $(".modal"),
     modalBtn = $("[data-toggle=modal]"),
     closeModal = $(".modal__close"),
@@ -14,12 +17,14 @@ $(document).ready(function () {
     if (e.target == this) switchModal();
   });
 
+  //=Отлеживание кнопки Esp
   $(document).keydown(function (e) {
     if (e.keyCode == 27) {
       $(".modal").removeClass("modal--visible");
     }
   });
 
+  //=кнопка Рокета, для плавного перехода наверх
   let btn = document.querySelector(".button-up");
 
   function magic() {
@@ -29,7 +34,8 @@ $(document).ready(function () {
       btn.style.opacity = "0";
     }
   }
-
+  
+  //=Функция плавного перехода
   $(btn).click(function () {
     $("body,html").animate({ scrollTop: 0 }, 800);
     return false;
@@ -37,6 +43,8 @@ $(document).ready(function () {
 
   // When scrolling, we run the function
   window.onscroll = magic;
+
+
 
 
   //====================
@@ -93,9 +101,11 @@ $(document).ready(function () {
   next2.css("left", arrowPrev.width() + 25 + buttons2.width() + 30);
   buttons2.css("left", arrowPrev.width() + 25);
 
-  //======================
-  //===Обработчик чисел===
-  //======================
+
+
+  //====================================
+  //===Обработчик чисел второго слайдера
+  //====================================
 
   $(".swiper-button-prev2, .swiper-button-next2,.swiper-pagination2").on(
     "click",
@@ -116,8 +126,14 @@ $(document).ready(function () {
     }
   );
 
+  //================
+  //=Создание wow.js
+  //================
   new WOW().init();
 
+  //================================
+  //=Собственный скрипт для анимации
+  //================================
   $(window).scroll(function () {
     var controlDesctiption = $(".control__desctiption").offset().top - 600;
 
@@ -127,7 +143,9 @@ $(document).ready(function () {
   });
 
 
-  //Подключение яндекс карты
+  //=========================
+  //=Подключение яндекс карты
+  //=========================
   ymaps.ready(function () {
     var myMap = new ymaps.Map(
         "map",
@@ -188,5 +206,93 @@ $(document).ready(function () {
       );
 
     myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
+  });
+
+  //===================
+  //=Маска для телефона
+  //===================
+  $("input[name='phoneForm']").mask("+7 (000) 000-00-00", {placeholder: "+7 (___) ___-__-__"});
+
+  //======================
+  //=Подключение валидации
+  //======================
+
+  //=Валидация модального окна
+  $(".modal__form").validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      nameForm: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phoneForm: "required",
+      emailForm: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      nameForm: {
+        required: "Заполните поле",
+        minlength: "Минимальное количество символов 2",
+        maxlength: "Максимальное количество символов 15",
+      },
+      phoneForm: "Заполните поле",
+      emailForm: {
+        required: "Заполните поле",
+        email: "Введите корректный email",
+      },
+    },
+  });
+
+  //=Валидация формы в секции control
+  $(".control__form").validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      nameForm: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phoneForm: "required",
+    },
+    messages: {
+      nameForm: {
+        required: "Заполните поле",
+        minlength: "Минимальное количество символов 2",
+        maxlength: "Максимальное количество символов 15",
+      },
+      phoneForm: "Заполните поле",
+    },
+  });
+
+  //=Валидация формы в секции footer
+  $(".footer__form").validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      nameForm: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phoneForm: "required",
+      questionForm: "required",
+    },
+    messages: {
+      nameForm: {
+        required: "Заполните поле",
+        minlength: "Минимальное количество символов 2",
+        maxlength: "Максимальное количество символов 15",
+      },
+      phoneForm: "Заполните поле",
+      questionForm: "Заполните поле",
+    },
   });
 });

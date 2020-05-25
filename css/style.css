@@ -1041,6 +1041,8 @@ body {
   position: relative;
   padding-top: 19.7rem;
   background: #131313 url(../img/footer-bg.jpg) center/cover; }
+  .footer .invalid {
+    color: #fff; }
   .footer__block {
     position: absolute;
     top: 1.2%;
@@ -1173,6 +1175,11 @@ body {
     margin-right: 0.5rem;
     border-radius: 1px;
     border: 1px solid #E3B873; }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.43rem; }
 
 .myAnimated {
   -webkit-animation: fontSize 1.9s ease 0.2s forwards;
@@ -1535,5 +1542,13 @@ body {
   right: 50px;
   width: 70px;
   height: 70px;
+  outline: none;
+  cursor: pointer;
   border: none;
   background: url(../img/rocket.svg) no-repeat center/cover; }
+
+.invalid {
+  font-size: 1rem; }
+
+input.invalid {
+  border-bottom: 1px solid red; }

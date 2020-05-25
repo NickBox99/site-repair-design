@@ -202,12 +202,12 @@
           <form action="#" class="form control__form">
             <div class="form__group-box">
               <label for="user-name" class="label label--grey form__label label--fz">Имя</label>
-              <input type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
+              <input name="nameForm" type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
             </div>
 
             <div class="form__group-box">
               <label for="user-phone" class="label label--grey form__label label--fz">Телефон</label>
-              <input type="text" class="input input--black control__input" id="user-phone" placeholder="Ваш номер телефона:">
+              <input name="phoneForm" type="tel" class="input input--black control__input" id="user-phone" placeholder="Ваш номер телефона:">
             </div>
 
             <button class="button form__button button--primary control__button">Отправить</button>
@@ -770,17 +770,17 @@
             <form action="#" class="form footer__form">
               <div class="form__group-box footer__group-box">
                 <label for="user-name" class="label label--grey label--fz form__label">Имя</label>
-                <input type="text" class="input input--black footer__input" id="user-name" placeholder="Как вас зовут:">
+                <input name="nameForm" type="text" class="input input--black footer__input" id="user-name" placeholder="Как вас зовут:">
               </div>
 
               <div class="form__group-box footer__group-box">
                 <label for="user-phone" class="label label--grey label--fz form__label">Телефон</label>
-                <input type="text" class="input input--black footer__input" id="user-phone" placeholder="Ваш номер телефона:">
+                <input name="phoneForm" type="tel" class="input input--black footer__input" id="user-phone" placeholder="Ваш номер телефона:">
               </div>
 
               <div class="form__group-box form__group-box--full-wicth form__group-box--margin">
                 <label for="user-phone" class="label label--grey label--fz form__label">Вопрос</label>
-                <input type="text" class="input input--black footer__input" id="user-phone" placeholder="Я хочу спросить:">
+                <input name="questionForm" type="text" class="input input--black footer__input" id="user-phone" placeholder="Я хочу спросить:">
               </div>
 
               <div class="policy footer__policy">
@@ -840,14 +840,18 @@
           <button class="modal__close"></button>
           <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
           <form action="#" class="form modal__form">
-            <label for="user-name" class="label form__label">Имя</label>
-            <input type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
-
-            <label for="user-phone" class="label form__label">Телефон</label>
-            <input type="text" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <div class="box">
+              <label for="user-name" class="label form__label">Имя</label>
+              <input name="nameForm" type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
+            </div>
+            
+            <div class="box">
+              <label for="user-phone" class="label form__label">Телефон</label>
+              <input name="phoneForm" type="tel" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+            </div>
 
             <label for="user-email" class="label form__label">Email</label>
-            <input type="text" class="input form__input" id="user-email" placeholder="Ваш email">
+            <input name="emailForm" type="text" class="input form__input" id="user-email" placeholder="Ваш email">
             
             <div class="policy modal__policy">
               <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
@@ -863,6 +867,8 @@
     </main>
 
     <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<985c36fd-cb53-4bd8-a5b0-aece6a2345b5>&lang=ru_RU" type="text/javascript"></script>
