@@ -199,7 +199,7 @@
             прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
           </p>
 
-          <form action="#" class="form control__form">
+          <form action="send.php" method="POST" class="form control__form">
             <div class="form__group-box">
               <label for="user-name" class="label label--grey form__label label--fz">Имя</label>
               <input name="nameForm" type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
@@ -323,6 +323,44 @@
         <!-- /.container -->
       </section>
       <!-- /.section types -->
+      <div class="section hous">
+        <img src="img/hous.png" alt="дом" class="hous__img">
+        <div class="container">
+          <div class="col-50 hous__content">
+            <div class="hous__dialog">
+            <h3 class="hous__title">Оставьте заявку на бесплатный выезд замерщика</h3>
+            <form action="#" class="form hous__form">
+              <div class="box">
+                <label for="user-name" class="label form__label">Имя</label>
+                <input name="nameForm" type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
+              </div>
+              
+              <div class="box">
+                <label for="user-phone" class="label form__label">Телефон</label>
+                <input name="phoneForm" type="tel" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+              </div>
+
+              <label for="user-email" class="label form__label">Email</label>
+              <input name="emailForm" type="text" class="input form__input" id="user-email" placeholder="Ваш email">
+              
+              <div class="policy hous__policy">
+                <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
+                <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+              </div>
+              <button class="button form__button button--primary hous__button">Вызвать замерщика</button>
+            </form>
+            <!-- Конец формы -->
+          </div>
+          </div>
+          <!-- /.col-50 -->
+          <div class="hous__box">
+            <img src="img/pig-money.png" alt="pig-money" class="box__pig">
+            <strong class="box__text">Это поможет сэкономить 10 - 20% от стоимости материалов</strong>
+          </div>
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.section hous -->
       <section class="section dising">
         <div class="container">
           <div class="section-title dising__title">
@@ -767,7 +805,7 @@
           <div class="footer__block">
             <h3 class="footer__title">Остались вопросы?</h3>
 
-            <form action="#" class="form footer__form">
+            <form action="#" method="POST"  class="form footer__form">
               <div class="form__group-box footer__group-box">
                 <label for="user-name" class="label label--grey label--fz form__label">Имя</label>
                 <input name="nameForm" type="text" class="input input--black footer__input" id="user-name" placeholder="Как вас зовут:">
@@ -839,7 +877,7 @@
         <div class="modal__dialog">
           <button class="modal__close"></button>
           <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-          <form action="#" class="form modal__form">
+          <form action="send.php" method="POST"  class="form modal__form">
             <div class="box">
               <label for="user-name" class="label form__label">Имя</label>
               <input name="nameForm" type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
@@ -859,6 +897,18 @@
             </div>
             <button class="button form__button button--primary">Отправить заявку</button>
           </form>
+          <!-- Конец формы -->
+        </div>
+      </div>
+      <!-- /Модальное окно -->
+
+
+      <!-- Модальное окно благодарности -->
+      <div class="modal" id="thanks">
+        <div class="modal__dialog">
+          <button class="modal__close"></button>
+          <h3 class="modal__title">Спасибо что оставили заявку</h3>
+          <h4 class="modal__title">Наша группа в вк: <a href="https://vk.com/">Тык</a></h4>
           <!-- Конец формы -->
         </div>
       </div>

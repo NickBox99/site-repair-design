@@ -3,7 +3,7 @@ $(document).ready(function () {
   //===============
   //=Модальное окно
   //===============
-  const modal = $(".modal"),
+  const modal = $("#modal"),
     modalBtn = $("[data-toggle=modal]"),
     closeModal = $(".modal__close"),
     switchModal = () => {
@@ -11,10 +11,12 @@ $(document).ready(function () {
     };
 
   modalBtn.on("click", switchModal);
-  closeModal.on("click", switchModal);
+  closeModal.on("click", function(){
+    $(".modal").removeClass("modal--visible");
+  });
 
   $(".modal").on("click", function (e) {
-    if (e.target == this) switchModal();
+    if (e.target == this) $(".modal").removeClass("modal--visible");
   });
 
   //=Отлеживание кнопки Esp
@@ -216,7 +218,7 @@ $(document).ready(function () {
   //======================
   //=Подключение валидации
   //======================
-
+  const thanksModal = $("#thanks");
   //=Валидация модального окна
   $(".modal__form").validate({
     errorClass: "invalid",
@@ -228,7 +230,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15,
       },
-      phoneForm: "required",
+      phoneForm: {
+        required: true,
+        minlength: 18,
+      },
       emailForm: {
         required: true,
         email: true,
@@ -240,11 +245,29 @@ $(document).ready(function () {
         minlength: "Минимальное количество символов 2",
         maxlength: "Максимальное количество символов 15",
       },
-      phoneForm: "Заполните поле",
+      phoneForm: {
+        required: "Заполните поле",
+        minlength: "Заполните поле",
+      },
       emailForm: {
         required: "Заполните поле",
         email: "Введите корректный email",
       },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass("modal--visible");
+          thanksModal.addClass("modal--visible");
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        },
+      });
     },
   });
 
@@ -259,7 +282,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15,
       },
-      phoneForm: "required",
+      phoneForm: {
+        required: true,
+        minlength: 18,
+      },
     },
     messages: {
       nameForm: {
@@ -267,7 +293,24 @@ $(document).ready(function () {
         minlength: "Минимальное количество символов 2",
         maxlength: "Максимальное количество символов 15",
       },
-      phoneForm: "Заполните поле",
+      phoneForm: {
+        required: "Заполните поле",
+        minlength: "Заполните поле",
+      },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanksModal.addClass("modal--visible");
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        },
+      });
     },
   });
 
@@ -282,7 +325,10 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15,
       },
-      phoneForm: "required",
+      phoneForm: {
+        required: true,
+        minlength: 18,
+      },
       questionForm: "required",
     },
     messages: {
@@ -291,8 +337,25 @@ $(document).ready(function () {
         minlength: "Минимальное количество символов 2",
         maxlength: "Максимальное количество символов 15",
       },
-      phoneForm: "Заполните поле",
+      phoneForm: {
+        required: "Заполните поле",
+        minlength: "Заполните поле",
+      },
       questionForm: "Заполните поле",
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanksModal.addClass("modal--visible");
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        },
+      });
     },
   });
 });
