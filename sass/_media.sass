@@ -2,7 +2,19 @@
     .hero
         &__sroll-down
             display: none
+@media screen and ( max-width: 1460px )
+    .hous
+        padding-bottom: 0
+        &__img
+            width: 48rem
+            margin-top: 2.8rem
+    .col-60
+        width: 66%
+    .styles
+        display: none
 @media screen and ( max-width: 1310px )
+    .section,.footer
+        margin-top: -1px
     body
         font-size: 0.9rem
     .card
@@ -11,7 +23,49 @@
     .footer
         &__block
             padding: 1.1rem 6%
+    .styles
+        background: linear-gradient(to top, #131313 43%, $light 36%)
+        margin-bottom: 0
+        &__list
+            display: none
+        &__img
+            display: none
+            &:nth-child(2)
+                position: relative
+                display: block
+                width: 90%
+                margin: 0 auto
+        &__row
+            flex-direction: column 
+        &__swiper
+            margin-top: 0   
+        &__title
+            margin-top: 0
+            margin-bottom: 2.5rem
+            font-size: 1.82rem
+            text-align: center
+    .col-60
+        position: relative
+        width: 100%
+    .swiper-button
+        &-next3,&-prev3
+            display: block
+            top: 50%
+            width: 36px
+            height: 36px
+            outline: none
+        &-next3
+            margin-left: auto
+            background: url(../img/styles-arrow-next.svg) no-repeat center
+        &-prev3
+            background: url(../img/styles-arrow-prev.svg) no-repeat center
 @media screen and ( max-width: 1270px )
+    .projects
+        padding-bottom: 0
+    .control
+        padding-top: 1rem
+        &__section-title
+            color: #000
     .contacts
         &__phone
             margin-right: 0.8rem
@@ -37,6 +91,10 @@
                 font-size: 1rem
             &-days
                 left: 9.2rem
+    .hous
+        &__dialog
+            padding: 1.75rem 2.5rem 1.92rem 2.5rem
+            max-width: 31.27rem
 @media screen and ( max-width: 1200px )
     html
         font-size: 12px
@@ -56,12 +114,48 @@
             font-size: 1rem
         &__count
             &-days
-                left: auto
+                
                 right: 0
             &-meter
                 padding-right: 2.2rem
+    .hous
+        &__img
+            margin-top: 4.8rem
+        &__dialog
+            max-width: 27.27rem
+    .col-32
+        width: 100%
+    .styles
+        display: block
+        background: $dark
+        &__title
+            margin: 4rem auto
+    .swiper-button
+        &-prev3,&-next3
+            width: 160px
+            height: 160px
+            top: 46%
+            background-size: cover
+        &-prev3
+            left: 2%
+        &-next
+            right: 2%
+    .swiper-container2
+        margin-right: 12px
 @media screen and ( max-width: 992px )
+    .swiper-container1
+        max-width: 70%
+        margin-left: 0
+    .swiper-button
+        &-prev3,&-next3
+            top: 42%
+        &-prev3
+            left: 2%
+        &-next
+            right: 2%
     .nav
+        display: none
+    .hous
         display: none
     .hero
         &__instagram
@@ -97,7 +191,9 @@
     .goals
         display: none
     .control
-        margin-top: -79.6rem
+        margin-top: -82.3rem
+        &__section-title
+            color: $light
         &__desctiption
             color: $light
         &__input
@@ -123,7 +219,9 @@
         &__button
             align-self: auto
     .projects
-        padding-bottom: 80rem
+        padding-bottom: 84rem
+    .dising
+        padding-top: 3.7rem
     .policy__label--content-center
         justify-content: start
         color: $light
@@ -131,7 +229,7 @@
     .clients
         display: none
     .team
-        padding-top: 1.2rem
+        padding-top: 0
         background: $dark
         &__title
             margin-bottom: 1.8rem
@@ -191,7 +289,7 @@
         &__title
             margin-bottom: 4.7rem
         &__block
-            padding: 0 1%
+            padding: 0
             top: 0
             left: 0
             transform: translate(0,0)
@@ -199,6 +297,11 @@
             line-height: 1.4
             font-size: 1.53rem
             max-width: 336px 
+    .swiper-button
+        &-prev3,&-next3
+            background-size: cover
+            width: 110px
+            height: 110px
 @media screen and ( max-width: 576px )
     html
         font-size: 12px
@@ -230,6 +333,7 @@
         &__text
             font-size: 1.5rem
             margin-bottom: 2.88rem
+            max-width: 318px
         &__button
             display: block
             min-width: 100%
@@ -286,7 +390,7 @@
         &__desctiption 
             margin-bottom: 2.4rem
             letter-spacing: -0.01rem
-            font-size: 1.2rem
+            font-size: 1.19rem
             line-height: 2.02rem
             &::before
                 margin-bottom: 1.3rem
@@ -301,6 +405,7 @@
         &__player
             width: 61px
     .form
+        margin-bottom: 4.5rem
         &__group-box
             margin-bottom: 5.3rem
             &:nth-child(2)
@@ -308,6 +413,16 @@
             &--margin
                 margin-top: 4.3rem
                 margin-bottom: 0.7rem
+    .types
+        padding-bottom: 0
+    .styles
+        &__img
+            &:nth-child(2)
+                width: 95%
+    .dising
+        padding-top: 1.2rem
+        &__description
+            margin-bottom: 3.057rem
     .team
         padding-bottom: 0.9rem
         &__content-card
@@ -323,12 +438,12 @@
             
             margin-bottom: 0
     .footer
-        
+        &__form
+            margin-bottom: 3rem
         &__policy
             margin-bottom: 3.3rem
         &__block
             margin-bottom: 2.2rem
-        
         &__mail
             margin-right: 19px
         &__mail, &__instagram
@@ -339,3 +454,9 @@
         max-height: 21.6rem
         min-height: 21.6rem
         margin-bottom: 3.1rem
+    .swiper-button
+        &-prev3,&-next3
+            background-size: cover
+            width: 72px
+            height: 72px
+            top: 44%

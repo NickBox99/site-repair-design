@@ -199,21 +199,21 @@
             прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
           </p>
 
-          <form action="send.php" method="POST" class="form control__form">
+          <form action="#" method="POST" class="form control__form">
             <div class="form__group-box">
-              <label for="user-name" class="label label--grey form__label label--fz">Имя</label>
-              <input name="nameForm" type="text" class="input input--black control__input" id="user-name" placeholder="Как вас зовут:">
+              <label for="control__user-name" class="label label--grey form__label label--fz">Имя</label>
+              <input name="nameForm" type="text" class="input input--black control__input" id="control__user-name" placeholder="Как вас зовут:">
             </div>
 
             <div class="form__group-box">
-              <label for="user-phone" class="label label--grey form__label label--fz">Телефон</label>
-              <input name="phoneForm" type="tel" class="input input--black control__input" id="user-phone" placeholder="Ваш номер телефона:">
+              <label for="control__user-phone" class="label label--grey form__label label--fz">Телефон</label>
+              <input name="phoneForm" type="tel" class="input input--black control__input" id="control__user-phone" placeholder="Ваш номер телефона:">
             </div>
 
             <button class="button form__button button--primary control__button">Отправить</button>
             <div class="policy control__policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
-              <label for="policy-checkbox" class="policy__label policy__label--content-center">Я соглашаюсь с обработкой данных</label>
+              <input name="checkboxForm" type="checkbox" id="control__policy-checkbox" class="policy-checkbox" checked>
+              <label for="control__policy-checkbox" class="policy__label policy__label--content-center">Я соглашаюсь с обработкой данных</label>
             </div>
           </form>
         </div>
@@ -331,21 +331,21 @@
             <h3 class="hous__title">Оставьте заявку на бесплатный выезд замерщика</h3>
             <form action="#" class="form hous__form">
               <div class="box">
-                <label for="user-name" class="label form__label">Имя</label>
-                <input name="nameForm" type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
+                <label for="hous__user-name" class="label form__label">Имя</label>
+                <input name="nameForm" type="text" class="input form__input" id="hous__user-name" placeholder="Как вас зовут:">
               </div>
               
               <div class="box">
-                <label for="user-phone" class="label form__label">Телефон</label>
-                <input name="phoneForm" type="tel" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+                <label for="hous__user-phone" class="label form__label">Телефон</label>
+                <input name="phoneForm" type="tel" class="input form__input" id="hous__user-phone" placeholder="Ваш номер телефона:">
               </div>
 
-              <label for="user-email" class="label form__label">Email</label>
-              <input name="emailForm" type="text" class="input form__input" id="user-email" placeholder="Ваш email">
+              <label for="hous__user-email" class="label form__label">Email</label>
+              <input name="emailForm" type="text" class="input form__input" id="hous__user-email" placeholder="Ваш email">
               
               <div class="policy hous__policy">
-                <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
-                <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                <input type="checkbox" name="checkboxForm" id="hous__policy-checkbox" class="policy-checkbox" checked>
+                <label for="hous__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
               </div>
               <button class="button form__button button--primary hous__button">Вызвать замерщика</button>
             </form>
@@ -361,6 +361,64 @@
         <!-- /.container -->
       </div>
       <!-- /.section hous -->
+      <section class="section styles">
+        <div class="container">
+          <div class="row styles__row">
+            <div class="col-32">
+              <h2 class="styles__title">
+                Мы реализуем ваши самые смелые фантазии
+              </h2>
+  
+              <ul class="styles__list">
+                <li data-slide="1" class="styles__item slide-1 styles__item-active">Американская классика</li>
+                <li data-slide="2" class="styles__item slide-2">Имперский стиль</li>
+                <li data-slide="3" class="styles__item slide-3">Классика</li>
+                <li data-slide="4" class="styles__item slide-4">Лофт</li>
+                <li data-slide="5" class="styles__item slide-5">Минимализм</li>
+                <li data-slide="6" class="styles__item slide-6">Прованс</li>
+                <li data-slide="7" class="styles__item slide-7">Романтизм</li>
+                <li data-slide="8" class="styles__item slide-8">Скандинавский стиль</li>
+                <li data-slide="9" class="styles__item slide-9">Средиземноморский стиль</li>
+                <li data-slide="10" class="styles__item slide-10">Хайтек</li>
+                <li data-slide="11" class="styles__item slide-11">Эклектизм</li>
+              </ul>
+            </div>
+  
+            <div class="col-60">
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev swiper-button-prev3"></div>
+              <div class="swiper-button-next swiper-button-next3"></div>
+              <!-- Slider main container -->
+              <div class="swiper-container styles__swiper swiper-container3 ">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper swiper-no-swiping">
+                      <!-- Slides -->
+                      <div class="swiper-slide styles__wraperImg">
+                        <img src="img/styles-img1.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img3.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img2.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img4.jpg" alt="картинка" class="styles__img">
+                      </div>
+                      <div class="swiper-slide styles__wraperImg">
+                        <img src="img/styles-img5.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img7.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img6.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img8.jpg" alt="картинка" class="styles__img">
+                      </div>
+                      <div class="swiper-slide styles__wraperImg">
+                        <img src="img/styles-img1.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img3.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img2.jpg" alt="картинка" class="styles__img">
+                        <img src="img/styles-img4.jpg" alt="картинка" class="styles__img">
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section styles -->
       <section class="section dising">
         <div class="container">
           <div class="section-title dising__title">
@@ -807,23 +865,23 @@
 
             <form action="#" method="POST"  class="form footer__form">
               <div class="form__group-box footer__group-box">
-                <label for="user-name" class="label label--grey label--fz form__label">Имя</label>
-                <input name="nameForm" type="text" class="input input--black footer__input" id="user-name" placeholder="Как вас зовут:">
+                <label for="footer__user-name" class="label label--grey label--fz form__label">Имя</label>
+                <input name="nameForm" type="text" class="input input--black footer__input" id="footer__user-name" placeholder="Как вас зовут:">
               </div>
 
               <div class="form__group-box footer__group-box">
-                <label for="user-phone" class="label label--grey label--fz form__label">Телефон</label>
-                <input name="phoneForm" type="tel" class="input input--black footer__input" id="user-phone" placeholder="Ваш номер телефона:">
+                <label for="footer__user-phone" class="label label--grey label--fz form__label">Телефон</label>
+                <input name="phoneForm" type="tel" class="input input--black footer__input" id="footer__user-phone" placeholder="Ваш номер телефона:">
               </div>
 
               <div class="form__group-box form__group-box--full-wicth form__group-box--margin">
-                <label for="user-phone" class="label label--grey label--fz form__label">Вопрос</label>
-                <input name="questionForm" type="text" class="input input--black footer__input" id="user-phone" placeholder="Я хочу спросить:">
+                <label for="footer__user-question" class="label label--grey label--fz form__label">Вопрос</label>
+                <input name="questionForm" type="text" class="input input--black footer__input" id="footer__user-question" placeholder="Я хочу спросить:">
               </div>
 
               <div class="policy footer__policy">
-                <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
-                <label for="policy-checkbox" class="policy__label policy__label--content-center">Я соглашаюсь с обработкой данных</label>
+                <input name="checkboxForm" type="checkbox" id="footer__policy-checkbox" class="policy-checkbox" checked>
+                <label for="footer__policy-checkbox" class="policy__label policy__label--content-center">Я соглашаюсь с обработкой данных</label>
               </div>
 
               <button class="button form__button button--primary footer__button">Отправить</button>
@@ -877,23 +935,23 @@
         <div class="modal__dialog">
           <button class="modal__close"></button>
           <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-          <form action="send.php" method="POST"  class="form modal__form">
+          <form action="#" method="POST"  class="form modal__form">
             <div class="box">
-              <label for="user-name" class="label form__label">Имя</label>
-              <input name="nameForm" type="text" class="input form__input" id="user-name" placeholder="Как вас зовут:">
+              <label for="modal__user-name" class="label form__label">Имя</label>
+              <input name="nameForm" type="text" class="input form__input" id="modal__user-name" placeholder="Как вас зовут:">
             </div>
             
             <div class="box">
-              <label for="user-phone" class="label form__label">Телефон</label>
-              <input name="phoneForm" type="tel" class="input form__input" id="user-phone" placeholder="Ваш номер телефона:">
+              <label for="modal__user-phone" class="label form__label">Телефон</label>
+              <input name="phoneForm" type="tel" class="input form__input" id="modal__user-phone" placeholder="Ваш номер телефона:">
             </div>
 
-            <label for="user-email" class="label form__label">Email</label>
-            <input name="emailForm" type="text" class="input form__input" id="user-email" placeholder="Ваш email">
+            <label for="modal__user-email" class="label form__label">Email</label>
+            <input name="emailForm" type="text" class="input form__input" id="modal__user-email" placeholder="Ваш email">
             
             <div class="policy modal__policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy-checkbox" checked>
-              <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+              <input name="checkboxForm" type="checkbox" id="modal__policy-checkbox" class="policy-checkbox" checked>
+              <label for="modal__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
             </div>
             <button class="button form__button button--primary">Отправить заявку</button>
           </form>

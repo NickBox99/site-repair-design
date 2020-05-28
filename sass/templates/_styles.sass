@@ -1,0 +1,64 @@
+.styles
+    margin-bottom: -3.2rem
+    background: $dark url(../img/styles-bg.jpg) center / cover
+    &__title
+        margin-top: 9.5rem
+        margin-bottom: 3rem
+        font-family: 'Yeseva One', cursive
+        font-size: 1.92rem
+        font-weight: 400
+        text-transform: uppercase
+        color: $primary
+        line-height: 1.5
+    &__list
+        margin: 0
+        padding: 0
+        margin-bottom: 6.8rem
+    &__item
+        max-width: max-content
+        padding-bottom: 1.87rem
+        font-family: 'Open sans'
+        font-size: 1.45rem
+        font-weight: 400
+        color: $light
+        list-style-type: none
+        cursor: pointer
+        &:last-child
+            padding-bottom: 0
+        &:hover
+            color: $primary
+        &-active
+            color: $primary
+            cursor: default
+            &::after
+                display: block
+                content: ''
+                margin-top: 3px
+                width: 0%
+                height: 1px
+                background: #E3B873
+                animation: maxWidth 1.9s ease 0.2s forwards
+    &__wraperImg
+        position: relative
+        top: 0
+        left: 0
+        margin: 0
+    &__img
+        position: absolute
+        &:first-child
+            top: 5rem
+            left: 0
+        &:nth-child(2)
+            top: 0
+            right: 0
+        &:nth-child(3)
+            bottom: 0
+            left: 0
+        &:last-child
+            bottom: 5.8rem
+            right: 0
+    &__swiper
+        margin-top: -8rem
+.swiper-button
+    &-prev3, &-next3
+        display: none

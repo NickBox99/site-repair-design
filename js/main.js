@@ -1,5 +1,4 @@
 $(document).ready(function () {
- 
   //===============
   //=Модальное окно
   //===============
@@ -134,15 +133,15 @@ $(document).ready(function () {
   new WOW().init();
 
   //================================
-  //=Собственный скрипт для анимации
+  //=Собственный скрипт для анимации (Удален)
   //================================
-  $(window).scroll(function () {
-    var controlDesctiption = $(".control__desctiption").offset().top - 600;
+  // $(window).scroll(function () {
+  //   var controlDesctiption = $(".control__desctiption").offset().top - 600;
 
-    if ($(this).scrollTop() > controlDesctiption) {
-      $(".control__desctiption").addClass("myAnimated");
-    } 
-  });
+  //   if ($(this).scrollTop() > controlDesctiption) {
+  //     $(".control__desctiption").addClass("myAnimated");
+  //   } 
+  // });
 
 
   //=========================
@@ -219,10 +218,17 @@ $(document).ready(function () {
   //=Подключение валидации
   //======================
   const thanksModal = $("#thanks");
-  //=Валидация модального окна
-  $(".modal__form").validate({
+  //=Валидация окна в секции hous
+  $(".hous__form").validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next("label").append(error);
+      }
+
+      error.insertAfter($(element));
+    },
     rules: {
       // simple rule, converted to {required:true}
       nameForm: {
@@ -238,6 +244,9 @@ $(document).ready(function () {
         required: true,
         email: true,
       },
+      checkboxForm: {
+        required: true,
+      },
     },
     messages: {
       nameForm: {
@@ -252,6 +261,72 @@ $(document).ready(function () {
       emailForm: {
         required: "Заполните поле",
         email: "Введите корректный email",
+      },
+      checkboxForm: {
+        required: "- Не выбрано",
+      },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          thanksModal.addClass("modal--visible");
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        },
+      });
+    },
+  });
+  //=Валидация модального окна
+  $(".modal__form").validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next("label").append(error);
+      }
+
+      error.insertAfter($(element));
+    },
+    rules: {
+      // simple rule, converted to {required:true}
+      nameForm: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      phoneForm: {
+        required: true,
+        minlength: 18,
+      },
+      emailForm: {
+        required: true,
+        email: true,
+      },
+      checkboxForm: {
+        required: true,
+      },
+    },
+    messages: {
+      nameForm: {
+        required: "Заполните поле",
+        minlength: "Минимальное количество символов 2",
+        maxlength: "Максимальное количество символов 15",
+      },
+      phoneForm: {
+        required: "Заполните поле",
+        minlength: "Заполните поле",
+      },
+      emailForm: {
+        required: "Заполните поле",
+        email: "Введите корректный email",
+      },
+      checkboxForm: {
+        required: "- Не выбрано",
       },
     },
     submitHandler: function (form) {
@@ -275,6 +350,13 @@ $(document).ready(function () {
   $(".control__form").validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next("label").append(error);
+      }
+
+      error.insertAfter($(element));
+    },
     rules: {
       // simple rule, converted to {required:true}
       nameForm: {
@@ -286,6 +368,9 @@ $(document).ready(function () {
         required: true,
         minlength: 18,
       },
+      checkboxForm: {
+        required: true,
+      },
     },
     messages: {
       nameForm: {
@@ -296,6 +381,9 @@ $(document).ready(function () {
       phoneForm: {
         required: "Заполните поле",
         minlength: "Заполните поле",
+      },
+      checkboxForm: {
+        required: "- Не выбрано",
       },
     },
     submitHandler: function (form) {
@@ -318,6 +406,13 @@ $(document).ready(function () {
   $(".footer__form").validate({
     errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next("label").append(error);
+      }
+
+      error.insertAfter($(element));
+    },
     rules: {
       // simple rule, converted to {required:true}
       nameForm: {
@@ -330,6 +425,9 @@ $(document).ready(function () {
         minlength: 18,
       },
       questionForm: "required",
+      checkboxForm: {
+        required: true,
+      },
     },
     messages: {
       nameForm: {
@@ -342,6 +440,9 @@ $(document).ready(function () {
         minlength: "Заполните поле",
       },
       questionForm: "Заполните поле",
+      checkboxForm: {
+        required: "- Не выбрано",
+      },
     },
     submitHandler: function (form) {
       $.ajax({
@@ -357,5 +458,57 @@ $(document).ready(function () {
         },
       });
     },
+  });
+
+  //===================================
+  //Обработка сексии со стилями ремонта
+  //===================================
+
+  if (!window.matchMedia("(max-width: 1310px)").matches) {
+    var maxHeight = $(".styles").height();
+    $(".styles__wraperImg").css("height", maxHeight + 153);
+    $(".swiper-container3").css("max-height", maxHeight + 153);
+  }
+
+  $(".styles__item").on('click', function(){
+    $(".styles__item").removeClass("styles__item-active");
+    $(this).addClass("styles__item-active");
+  });
+
+  //====================
+  //===Третий слайдер===
+  //====================
+
+  //initialize swiper when document ready
+  var mySwiper3 = new Swiper(".swiper-container3", {
+    loop: true,
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next3",
+      prevEl: ".swiper-button-prev3",
+    },
+    breakpoints: {
+      // when window width is >= 1310px
+      1310: {
+        direction: "vertical",
+        spaceBetween: 10,
+      },
+    },
+  });
+  
+  var numberThis = 1;
+  $(".styles__item").on('click', function(){
+    var numberTemp = $(this).data("slide");
+
+    while (numberTemp != numberThis) {
+      if (numberTemp < numberThis) {
+        $(".swiper-button-prev3").trigger("click");
+        numberThis--;
+      }
+      else if(numberTemp > numberThis){
+        $(".swiper-button-next3").trigger("click");
+        numberThis++;
+      }
+    } 
   });
 });
